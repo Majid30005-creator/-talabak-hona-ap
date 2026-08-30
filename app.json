@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "طلبك هنا",
+    "slug": "talabak-hona",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.talabakhona.app",
+      "buildNumber": "1",
+      "infoPlist": {
+        "NSCameraUsageDescription": "يستخدم تطبيق طلبك هنا الكاميرا لإضافة صور إلى الطلبات والإعلانات.",
+        "NSPhotoLibraryUsageDescription": "يستخدم تطبيق طلبك هنا مكتبة الصور لإرفاق صور بالطلبات والإعلانات والمحادثات.",
+        "NSMicrophoneUsageDescription": "يستخدم تطبيق طلبك هنا الميكروفون عند استخدام ميزات التسجيل الصوتي داخل المحادثات."
+      }
+    }
+  }
+}
