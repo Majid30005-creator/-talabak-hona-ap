@@ -1,4 +1,4 @@
-expoexport default {
+export default {
   expo: {
     name: "طلبك هنا",
     slug: "talabak-hona",
