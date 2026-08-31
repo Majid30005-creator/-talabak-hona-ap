@@ -4,7 +4,9 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "start": "expo start"
+    "start": "expo start",
+    "doctor": "expo-doctor",
+    "check:ios": "expo export --platform ios --output-dir dist-check"
   },
   "dependencies": {
     "expo": "^54.0.0",
