@@ -4,13 +4,8 @@
     "slug": "talabak-hona",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./icon.png",
+    "icon": "./icon.png.PNG",
     "userInterfaceStyle": "light",
-    "splash": {
-      "image": "./splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
     "ios": {
       "supportsTablet": false,
       "bundleIdentifier": "com.talabakhona.app",
