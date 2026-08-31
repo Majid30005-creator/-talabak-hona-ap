@@ -37,12 +37,10 @@ jobs:
           fi
           npx eas-cli@latest whoami
 
-      - name: Create or link EAS project
+      - name: Verify linked EAS project
         env:
           EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
-        run: |
-          npx eas-cli@latest init --account majid30005creators-team --non-interactive --force
-          npx eas-cli@latest project:info
+        run: npx eas-cli@latest project:info
 
       - name: Validate Expo project
         run: npx expo-doctor
