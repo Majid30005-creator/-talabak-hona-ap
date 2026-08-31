@@ -7,7 +7,7 @@
     "start": "expo start",
     "doctor": "expo-doctor",
     "check:ios": "expo export --platform ios --output-dir dist-check",
-    "ios:setup": "npx eas-cli@latest build --platform ios --profile production"
+    "ios:setup": "npx eas-cli@latest credentials:configure-build --platform ios --profile production"
   },
   "dependencies": {
     "expo": "^54.0.0",
