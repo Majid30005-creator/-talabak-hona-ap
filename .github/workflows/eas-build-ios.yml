@@ -9,11 +9,13 @@ on:
       - app.json
       - eas.json
       - package.json
+      - package-lock.json
       - .github/workflows/eas-build-ios.yml
 
 jobs:
   build-ios:
     runs-on: ubuntu-latest
+    timeout-minutes: 45
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -22,9 +24,10 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
+          cache: npm
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Verify Expo token
         env:
@@ -40,11 +43,14 @@ jobs:
         env:
           EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
         run: |
-          npx eas-cli@latest init --account majid30005creator --non-interactive --force
+          npx eas-cli@latest init --account majid30005creators-team --non-interactive --force
           npx eas-cli@latest project:info
+
+      - name: Validate Expo project
+        run: npx expo-doctor
 
       - name: Build iOS with EAS
         env:
           EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
           EAS_BUILD_NO_EXPO_GO_WARNING: "true"
-        run: npx eas-cli@latest build --platform ios --profile production --non-interactive
+        run: npx eas-cli@latest build --platform ios --profile production --non-interactive --wait
