@@ -10,12 +10,16 @@
     "ios": {
       "supportsTablet": false,
       "bundleIdentifier": "com.talabakhona.app",
-      "buildNumber": "1",
       "infoPlist": {
         "NSCameraUsageDescription": "يستخدم تطبيق طلبك هنا الكاميرا لإضافة صور إلى الطلبات والإعلانات.",
         "NSPhotoLibraryUsageDescription": "يستخدم تطبيق طلبك هنا مكتبة الصور لإرفاق صور بالطلبات والإعلانات والمحادثات.",
         "NSMicrophoneUsageDescription": "يستخدم تطبيق طلبك هنا الميكروفون عند استخدام ميزات التسجيل الصوتي داخل المحادثات.",
         "ITSAppUsesNonExemptEncryption": false
+      }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "9be95995-7335-46a0-a64d-3ff32c206928"
       }
     }
   }
