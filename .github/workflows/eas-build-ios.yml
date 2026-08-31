@@ -18,7 +18,7 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Verify Expo token and project access
+      - name: Verify Expo token
         env:
           EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
         run: |
@@ -27,7 +27,13 @@ jobs:
             exit 1
           fi
           npx eas-cli@latest whoami
-          npx eas-cli@latest project:info --non-interactive
+
+      - name: Create or link EAS project
+        env:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+        run: |
+          npx eas-cli@latest init --account majid30005creator --non-interactive --force
+          npx eas-cli@latest project:info
 
       - name: Build iOS with EAS
         env:
