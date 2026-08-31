@@ -7,8 +7,9 @@
     "start": "expo start",
     "doctor": "expo-doctor",
     "check:ios": "expo export --platform ios --output-dir dist-check",
-    "x": "npx --yes eas-cli@latest login",
-    "i": "npx --yes eas-cli@latest credentials:configure-build --platform ios --profile production"
+    "x": "unset EXPO_TOKEN && npx --yes eas-cli@latest login",
+    "w": "unset EXPO_TOKEN && npx --yes eas-cli@latest whoami",
+    "i": "unset EXPO_TOKEN && npx --yes eas-cli@latest credentials:configure-build --platform ios --profile production"
   },
   "dependencies": {
     "expo": "^54.0.0",
